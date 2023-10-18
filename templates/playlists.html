@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Spotify Playlists</title>
+</head>
+<body>
+    <h1>My Spotify Playlists</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <ul>
+        {% for playlist in playlists["items"] %}
+        <li>{{ playlist["name"] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
